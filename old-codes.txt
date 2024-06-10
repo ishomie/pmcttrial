@@ -1,0 +1,124 @@
+
+                    <h3>Create New Project</h3>
+                    <button onclick="createFolder()">Create Project</button>
+
+                    <script>
+                        function createFolder(){
+                            const currentDate = new Date();
+                            const year = currentDate.getFullYear();
+                            const quarter = getQuarter(currentDate);
+                            const projectNumber = getProjectNumber(); // I'll need to implement this logic
+
+                            const folderName = '${year}.${quarter}.${projectNumber}';
+                            //I can use server-side logic (PHP, Node.js) to create the actualy folder.
+
+                            alert('Folder "${folderName}" created successfully');
+                        }
+
+                        function getQuarter(date){
+                            const month = date.getMonth() + 1; //January is 0
+                            return Math.ceil(month / 3);
+                        }
+
+                        //I'll need to implement my own logic to get the project number
+                        function getProjectNumber(){
+                            //Ex: Fetch project count from a database or increment a counter
+                            //For now, will assume it's hardcoded:
+                            return 1; //Change this dynamically based on the project count
+                        }
+                    </script>
+
+(Original Trial Code)
+                    <!-- File Generator Trial Code-->
+                    <h3>Create New Project (cnp: 308-353)</h3>
+
+                    <body>
+                        <p>Current Year: <span id="currentYear"></span></p>
+                        <p>Current Quarter: <span id="currentQuarter"></span></p>
+                        <label for="clientInput">Client Name: </label>
+                        <input type="text" id="clientInput">
+                        <button onclick="createFolder()">Create Project</button>
+
+                        <!--Display success message here-->
+                        <div id="successMessage"></div>
+
+                        <script>
+                            // Get the current year and quarter
+                            const currentDate = new Date();
+                            const currentYear = currentDate.getFullYear();
+                            const currentQuarter = getQuarter(currentDate);
+
+                            // Display the current year and Quarter
+                            document.getElementById("currentYear").textContent = currentYear;
+                            document.getElementById("currentQuarter").textContent = 'Q${currentQuarter}';
+
+                            // Initialize project number (Fetch this from the database later)
+                            let projectNumber = 1;
+
+                            function createFolder(){
+                                const projectName = document.getElementById("projectName").value;
+                                const clientName = document.getElementById("clientInput").value;
+
+                                // Construct the folder name
+                                const folderName = '${currentYear}.${currentQuarter}.${projectNumber}';
+                                // Logic to create the folder and save to cloud storage goes here/ Server-side logic (PHP, Node.js) to create the actual folder.
+
+                                // Increment project number for the next project
+                                projectNumber++;
+
+                                // Display success message ("Folder uploaded to cloud storage!")
+
+                                document.getElementById("successMessage").textContent = 'Folder "${folderName}! uploaded for client "${clientName}"!';
+                            }
+
+                            function getQuarter(date){
+                                const month = date.getMonth() + 1; // January is 0
+                                return Math.ceil(month / 3);
+                            }
+                        </script>
+
+                        <script>
+                            function createFolder(){
+                                const year = document.getElementBy
+                            }
+                        </script>
+
+                    </body>
+                    <script>
+                        function createFolder(){
+                            const currentDate = new Date();
+                            const year = currentDate.getFullYear();
+                            const quarter = getQuarter(currentDate);
+                            const projectNumber = getProjectNumber(); // I'll need to implement this logic
+
+                            const folderName = '${year}.${quarter}.${projectNumber}';
+                            //I can use server-side logic (PHP, Node.js) to create the actualy folder.
+
+                            alert('Folder "${folderName}" created successfully');
+                        }
+
+                        function getQuarter(date){
+                            const month = date.getMonth() + 1; //January is 0
+                            return Math.ceil(month / 3);
+                        }
+
+                        //I'll need to implement my own logic to get the project number
+                        function getProjectNumber(){
+                            //Ex: Fetch project count from a database or increment a counter
+                            //For now, will assume it's hardcoded:
+                            return 1; //Change this dynamically based on the project count
+                        }
+                    </script>
+
+                </div>
+
+Table Body
+<tbody>
+                                        <tr>
+                                            <td><input type="text" id="clientName"></span>
+                                                <input type="text" id="location"></span>
+                                                <span id="currentYear"></span>
+                                                <span id="currentQuarter"></span>
+                                            </td>
+                                        </tr>
+                                    </tbody>
